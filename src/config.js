@@ -2,6 +2,10 @@ export const config = {
   recipientName: "Friend",
   birthdayDate: "26 September 2026",
   birthdayDateShort: "26 • 09 • 2026",
+  entryText: "A little surprise awaits...",
+  entryButton: "ENTER THE EXPERIENCE",
+  preparingLine1: "Preparing something special...",
+  preparingLine2: "for someone truly special.",
   finalMessage: "You deserve a beautiful year ahead.",
   letterText:
     "Happy Birthday! Today is a celebration of all the wonderful light you bring into the world. May your day be filled with magic, laughter, and joy.",
