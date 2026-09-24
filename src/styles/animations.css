@@ -1,0 +1,61 @@
+/* Midnight Champagne Design System - Keyframes & Animation Utilities */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(212, 175, 122, 0.4));
+    opacity: 0.9;
+  }
+  50% {
+    filter: drop-shadow(0 0 22px rgba(212, 175, 122, 0.8));
+    opacity: 1;
+  }
+}
+
+/* Animation Utility Classes */
+.fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.fade-up {
+  animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.glow-pulse {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Respect Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .fade-in, .fade-up, .glow-pulse {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
